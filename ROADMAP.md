@@ -22,16 +22,16 @@ Use these labels throughout the reports:
 |---|---|---|---|
 | 1 | Repository reconnaissance and architecture | Complete — initial map | [Phase 1](phases/PHASE-01-REPOSITORY-RECONNAISSANCE.md) |
 | 2 | Backend bootstrap, configuration, database initialization, and lifecycle | Next | [Phase 2](phases/PHASE-02-BACKEND-BOOTSTRAP.md) |
-| 3 | API routes, middleware, request validation, status codes, errors | Planned | — |
-| 4 | Authentication, cookies/tokens, OAuth, authorization | Planned | — |
-| 5 | PostgreSQL schema, relationships, queries, indexes, transactions | Planned | — |
-| 6 | Business logic and feature-by-feature workflows | Planned | — |
-| 7 | Google/Outlook integrations, email, Slack/GitHub/AI services | Planned | — |
-| 8 | Schedulers, asynchronous work, retries, idempotency, concurrency | Planned | — |
-| 9 | Security, error handling, tests, input and data protection | Planned | — |
-| 10 | Performance, measurements, caching, Redis, queues, query tuning | Planned | — |
-| 11 | Docker, CI, deployment, health checks, production operations | Planned | — |
-| 12 | Whole-system synthesis, improvement backlog, interview mock | Planned | — |
+| 3 | API routes, middleware, request validation, status codes, errors | Planned | [Phase 3](phases/PHASE-03-API-ROUTES-MIDDLEWARE.md) |
+| 4 | Authentication, cookies/tokens, OAuth, authorization | Planned | [Phase 4](phases/PHASE-04-AUTHENTICATION-OAUTH-AUTHORIZATION.md) |
+| 5 | PostgreSQL schema, relationships, queries, indexes, transactions | Planned | [Phase 5](phases/PHASE-05-POSTGRESQL-DATA-MODEL.md) |
+| 6 | Business logic and feature-by-feature workflows | Planned | [Phase 6](phases/PHASE-06-BUSINESS-LOGIC-WORKFLOWS.md) |
+| 7 | Google/Outlook integrations, email, Slack/GitHub/AI services | Planned | [Phase 7](phases/PHASE-07-EXTERNAL-INTEGRATIONS.md) |
+| 8 | Schedulers, asynchronous work, retries, idempotency, concurrency | Planned | [Phase 8](phases/PHASE-08-BACKGROUND-JOBS.md) |
+| 9 | Security, error handling, tests, input and data protection | Planned | [Phase 9](phases/PHASE-09-SECURITY-ERRORS-TESTING.md) |
+| 10 | Performance, measurements, caching, Redis, queues, query tuning | Planned | [Phase 10](phases/PHASE-10-PERFORMANCE-OPTIMIZATION.md) |
+| 11 | Docker, CI, deployment, health checks, production operations | Planned | [Phase 11](phases/PHASE-11-DEPLOYMENT-OPERATIONS.md) |
+| 12 | Whole-system synthesis, improvement backlog, interview mock | Planned | [Phase 12](phases/PHASE-12-FINAL-SYNTHESIS-INTERVIEW-DRILL.md) |
 
 ## Report template for every phase
 
