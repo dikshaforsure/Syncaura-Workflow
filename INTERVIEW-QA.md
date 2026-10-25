@@ -61,28 +61,28 @@ This answer accurately describes the design decision the user reported. Before s
 ### How the two flows differ
 
 ```mermaid
-sequenceDiagram
-    actor U as User
-    participant FE as Syncaura frontend
-    participant BE as Syncaura backend
-    participant G as Google OAuth / APIs
-
-    U->>FE: Select Google sign-in
-    FE->>BE: Start identity flow
-    BE->>G: Request identity scopes
-    G-->>U: Google consent / account flow
-    G-->>BE: Authorization response
-    BE-->>FE: Establish Syncaura session
-    Note over U,FE: User is signed in; Calendar is not necessarily connected
-    U->>FE: Choose Connect Calendar
-    FE->>BE: Start calendar authorization
-    BE->>G: Request Calendar scope and consent
-    G-->>U: Consent for calendar access
-    G-->>BE: Authorization code
-    BE->>G: Exchange code for tokens
-    G-->>BE: Tokens and authorization metadata
-    BE->>BE: Store credentials securely for the correct user
-    BE-->>FE: Calendar connection status
+sequenceDiagram;
+actor U as User;
+participant FE as Syncaura frontend;
+participant BE as Syncaura backend;
+participant G as Google OAuth APIs;
+U->>FE: Select Google sign-in;
+FE->>BE: Start identity flow;
+BE->>G: Request identity scopes;
+G-->>U: Google account and consent flow;
+G-->>BE: Authorization response;
+BE-->>FE: Establish Syncaura session;
+Note over U,FE: Sign-in does not guarantee Calendar is connected;
+U->>FE: Choose Connect Calendar;
+FE->>BE: Start Calendar authorization;
+BE->>G: Request Calendar scope and consent;
+G-->>U: Ask user to approve or deny Calendar access;
+U->>G: Approve or deny Calendar access;
+G-->>BE: Return authorization code;
+BE->>G: Exchange code for tokens;
+G-->>BE: Return tokens and authorization metadata;
+BE->>BE: Associate credentials with the correct user;
+BE-->>FE: Return Calendar connection status;
 ```
 
 This is the **target design** for explaining separation of concerns. The actual source includes Google authentication/calendar code, but exact endpoint behavior, token persistence, state handling and whether this precise UX is fully implemented must be verified before claiming every step matches production.
